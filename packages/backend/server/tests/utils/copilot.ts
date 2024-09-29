@@ -42,7 +42,7 @@ export class MockCopilotTestProvider
   static override readonly type = CopilotProviderType.Test;
   override readonly availableModels = [
     'test',
-    'gpt-4o',
+    'gpt-4o-mini',
     'fast-sdxl/image-to-image',
     'lcm-sd15-i2i',
     'clarity-upscaler',

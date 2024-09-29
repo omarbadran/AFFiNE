@@ -23,17 +23,17 @@ If there are items in the content that can be used as to-do tasks, please refer 
 content: Some content`;
 
 assert.strictEqual(
-  encoding_for_model('gpt-4o').encode_ordinary(FIXTURE).length,
-  fromModelName('gpt-4o').count(FIXTURE)
+  encoding_for_model('gpt-4o-mini').encode_ordinary(FIXTURE).length,
+  fromModelName('gpt-4o-mini').count(FIXTURE)
 );
 
 bench
   .add('tiktoken', () => {
-    const encoder = encoding_for_model('gpt-4o');
+    const encoder = encoding_for_model('gpt-4o-mini');
     encoder.encode_ordinary(FIXTURE).length;
   })
   .add('native', () => {
-    fromModelName('gpt-4o').count(FIXTURE);
+    fromModelName('gpt-4o-mini').count(FIXTURE);
   });
 
 await bench.warmup();

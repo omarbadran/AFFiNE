@@ -41,7 +41,7 @@ export class OpenAIProvider
 
   readonly availableModels = [
     // text to text
-    'gpt-4o',
+    'gpt-4o-mini',
     'gpt-4o-mini',
     // embeddings
     'text-embedding-3-large',
